@@ -1,7 +1,20 @@
 import React from "react";
 import { StyleSheet, View, Text, TouchableOpacity, TextInput } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
-export default function Cadastro() {
+
+export default function Login() {
+
+    const navigation = useNavigation()
+
+    const [del1, setDel1] = React.useState('')
+    const [del2, setDel2] = React.useState('')
+
+    const deleta = () => {
+        setDel1('')
+        setDel2('')
+    }
+
     return (
         <View style={styles.container}>
             <View style={styles.titulo}>
@@ -9,16 +22,20 @@ export default function Cadastro() {
             </View>
 
             <View style={styles.form}>
-                <TextInput style={styles.input} placeholder="Usuario" />
-                <TextInput style={styles.input} placeholder="Senha" />
+                <TextInput style={styles.input} placeholder="Usuario" value={del1} onChangeText={setDel1} />
+                <TextInput style={styles.input} placeholder="Senha" value={del2} onChangeText={setDel2} />
             </View>
 
             <View style={styles.buttom}>
-                <TouchableOpacity style={styles.botao1}>
+                <TouchableOpacity style={styles.botao1} onPress={() => navigation.navigate('PagPrincipal')}>
                     <Text style={styles.textBotao}>Login</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.botao2}>
+                <TouchableOpacity style={styles.botao2} onPress={() => deleta()}>
                     <Text style={styles.textBotao}>Limpa</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.botao3} onPress={() => navigation.navigate('Cadastro')}>
+                    <Text style={styles.textBotao}>Cadastro</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -31,7 +48,7 @@ const styles = StyleSheet.create({
     },
     titulo: {
         textAlign: 'center'
-    }, 
+    },
     textTitulo: {
         fontSize: 40,
         marginTop: 10,
@@ -61,15 +78,23 @@ const styles = StyleSheet.create({
 
     },
     botao1: {
-        marginRight: 20,
+        marginRight: 2,
         backgroundColor: '#013DF5',
         height: 50,
         width: '30%',
         borderRadius: 9
     },
     botao2: {
-        marginRight: 20,
+        marginLeft: 5,
+        marginRight: 5,
         backgroundColor: '#D4492C',
+        height: 50,
+        width: '30%',
+        borderRadius: 9
+    },
+    botao3: {
+        marginRight: 3,
+        backgroundColor: '#E323F9',
         height: 50,
         width: '30%',
         borderRadius: 9

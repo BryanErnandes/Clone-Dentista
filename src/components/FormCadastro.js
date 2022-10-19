@@ -2,6 +2,17 @@ import React from "react";
 import { StyleSheet, View, Text, TouchableOpacity, TextInput } from "react-native";
 
 export default function Cadastro() {
+
+    const [del1, setDel1] = React.useState('')
+    const [del2, setDel2] = React.useState('')
+    const [del3, setDel3] = React.useState('')
+
+    const deleta = () => {
+        setDel1('')
+        setDel2('')
+        setDel3('')
+    }
+
     return (
         <View style={styles.container}>
             <View style={styles.titulo}>
@@ -9,17 +20,17 @@ export default function Cadastro() {
             </View>
 
             <View style={styles.form}>
-                <TextInput style={styles.input} placeholder="Nome" />
-                <TextInput style={styles.input} placeholder="Email" />
-                <TextInput style={styles.input} placeholder="Senha" />
+                <TextInput style={styles.input} placeholder="Nome" value={del1} onChangeText={setDel1} />
+                <TextInput style={styles.input} placeholder="Email" value={del2} onChangeText={setDel2} />
+                <TextInput style={styles.input} placeholder="Senha" value={del3} onChangeText={setDel3} />
             </View>
 
             <View style={styles.buttom}>
                 <TouchableOpacity style={styles.botao1}>
-                    <Text style={styles.textBotao}>Cadastra</Text>
+                    <Text style={styles.textBotao} onPress={() => navigation.navigate('Login')}>Cadastra</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.botao2}>
-                    <Text style={styles.textBotao}>Limpa</Text>
+                    <Text style={styles.textBotao} onPress={() => deleta()}>Limpa</Text>
                 </TouchableOpacity>
             </View>
         </View>

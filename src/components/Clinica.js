@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, StyleSheet, Text, View, ScrollView } from "react-native";
 
-export default function PagPrincipal() {
+export default function Clinica() {
     return (
         <ScrollView>
             <View style={styles.containerImagem}>
@@ -35,16 +35,16 @@ export default function PagPrincipal() {
                     <Image style={styles.imagem}
                         source={require('../../assets/cardeira.webp')} />
                 </View>
-            </View>
+            </View >
             <View style={styles.containerTitulo}>
                 <Text style={styles.titulo}>Com a palavra dos nossos queridos pacientes!</Text>
             </View>
-                <View style={[styles.card, styles.elevation]}>
-                    <Text style={styles.tituloC}>Henrigue Moraes</Text>
-                    <View style={styles.cComentario}>
-                        <Text style={styles.comentario}>Boa tarde, respondendo a sua pesquisa: estrutura, ambiente agradável, transmite paz, tranquilidade, salas confortáveis, uma estética moderna e equipamentos modernos. Nota 10. Atendimento 10, simpatia e muito respeito, recepcionista 10, dentista avaliador, 1000 exepcional.</Text>
-                    </View>
+            <View style={[styles.card, styles.shadowProp]}>
+                <Text style={styles.cardTitulo}>Henrigue Moraes</Text>
+                <View style={styles.cardComentario}>
+                    <Text style={styles.comentario}>Boa tarde, respondendo a sua pesquisa: estrutura, ambiente agradável, transmite paz, tranquilidade, salas confortáveis, uma estética moderna e equipamentos modernos. Nota 10. Atendimento 10, simpatia e muito respeito, recepcionista 10, dentista avaliador, 1000 exepcional.</Text>
                 </View>
+            </View>
         </ScrollView>
     )
 }
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     titulo: {
-        fontSize: 30,
+        fontSize: 25,
         width: '100%',
         color: '#38CDF5'
     },
@@ -82,41 +82,47 @@ const styles = StyleSheet.create({
         width: '100%'
     },
     texto: {
-        fontSize: 28
+        fontSize: 20,
+        fontWeight: 'bold'
     },
     imagens: {
-        marginBottom: 5
+        marginBottom: 5,
+        paddingRight: 1,
+        paddingLeft: 8,
     },
     imagem: {
+        width: '98%',
         height: 230,
-        width: '100%',
         borderRadius: 10
     },
-    tituloC: {
+    cardTitulo: {
         textAlign: 'center',
-        fontSize: 35,
+        fontSize: 30,
         width: '100%',
         color: '#C944FA'
     },
-    cComentario: {
+    cardComentario: {
         paddingTop: 10,
-        paddingRight: 34,
-        paddingLeft: 34,
         paddingBottom: 10,
         width: '100%',
     },
     comentario: {
-        fontSize: 28,
+        fontSize: 20,
+        textAlign: 'center',
+        fontWeight: 'bold'
     },
-    card: {  
-        backgroundColor: 'white',  
-        borderRadius: 8,  
-        paddingHorizontal: 25,  
-        width: '100%',  
-        marginVertical: 10,  
-      },  
-      elevation: {  
-        shadowColor: '#52006A',  
-        elevation: 20,  
-      },  
+    card: {
+        backgroundColor: 'white',
+        borderRadius: 8,
+        paddingVertical: 10,
+        paddingHorizontal: 10,
+        width: '97%',
+        marginVertical: 10,
+    },
+    shadowProp: {
+        shadowColor: '#171717',
+        shadowOffset: { width: 4, height: 6 },
+        shadowOpacity: 0.2,
+        shadowRadius: 3,
+    },
 })

@@ -3,7 +3,7 @@ import { StyleSheet, Image, View, Text } from "react-native";
 import Icon from "@expo/vector-icons/Entypo";
 import Icons from "@expo/vector-icons/FontAwesome";
 
-export default function Header(){
+export default function Nav(){
 return(
     <View style= {styles.container}>
      <View style= {styles.icon}>

@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     },
     textoMain: {
         fontSize: 17,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     },
     card: {
         border: 1,
