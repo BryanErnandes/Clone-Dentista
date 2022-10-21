@@ -15,9 +15,9 @@ export default function Header() {
             </TouchableOpacity>
             
             <View style={styles.titulo}>
-                <TouchableOpacity onPress={() => navigation.navigate('Especialidade')}>
+                <TouchableOpacity onPress={() => navigation.navigate('PagPrincipal')}>
 
-                    <Text style={styles.textTitulo}>Especialidade</Text>
+                    <Text style={styles.textTitulo}>Lima Odontologia</Text>
 
                 </TouchableOpacity>
             </View>
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
         marginRight: 25
     },
     textTitulo: {
-        fontSize: 18,
+        fontSize: 22,
         color: '#092AE6'
     },
     logo: {

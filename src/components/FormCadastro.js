@@ -22,7 +22,7 @@ export default function Cadastro() {
             <View style={styles.form}>
                 <TextInput style={styles.input} placeholder="Nome" value={del1} onChangeText={setDel1} />
                 <TextInput style={styles.input} placeholder="Email" value={del2} onChangeText={setDel2} />
-                <TextInput style={styles.input} placeholder="Senha" value={del3} onChangeText={setDel3} />
+                <TextInput style={styles.input} placeholder="Senha" secureTextEntry={true} value={del3} onChangeText={setDel3} />
             </View>
 
             <View style={styles.buttom}>
@@ -39,7 +39,8 @@ export default function Cadastro() {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        //flex: 1,
+        //alignItems: 'enter'
     },
     titulo: {
         textAlign: 'center'

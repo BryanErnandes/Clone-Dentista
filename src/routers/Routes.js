@@ -10,15 +10,14 @@ import Login from "../pages/LoginPage";
 import PagPrincipal from "../pages/PagPrincipal";
 import Clinica from "../pages/ClinicaPage";
 import Especialidade from "../pages/EspecialidadePage"
-import Contato from "../pages/ContatoPage"
 
 const Drawer = createDrawerNavigator()
 
 function Gaveta() {
     return (
-        < Drawer.Navigator>   
-        <Stack.Screen name="Principal" component={PagPrincipal} />
-        <Drawer.Screen name="Clinica" component={Clinica} />
+        <Drawer.Navigator>   
+        <Drawer.Screen name="Principal" component={PagPrincipal} />
+        <Drawer.Screen name="Especialidade" component={Menu} />
         </Drawer.Navigator>
     )
 }
@@ -31,7 +30,7 @@ function Menu() {
             <Tab.Screen name="Especial" component={Especialidade} options={{
                     tabBarIcon: ({size, color}) => (<Icon name={"closecircle"} color={"red"} size={size} />)
                 }} />
-            <Tab.Screen name="Contato" component={Contato} options={{
+            <Tab.Screen name="Clinica" component={Clinica} options={{
                     tabBarIcon: ({size, color}) => (<Icon name={"pluscircle"} color={"red"} size={size} />)
                 }} />
         </Tab.Navigator>
@@ -42,12 +41,11 @@ const Stack = createNativeStackNavigator()
 
 export default function Routes() {
     return (
-        <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="Login">
+        <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="PagPrincipal">
             <Stack.Screen name="Cadastro" component={Cadastro} />
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="PagPrincipal" component={Gaveta} />
             <Tab.Screen name="Especialidade" component={Menu} />
-            
         </Stack.Navigator>
     )
 }

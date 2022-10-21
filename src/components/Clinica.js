@@ -50,17 +50,13 @@ export default function Clinica() {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
     containerImagem: {
-        marginBottom: 9
+        marginBottom: 9,
     },
     logo: {
         height: 280,
         width: '100%',
         resizeMode: 'stretch',
-        borderRadius: 10
     },
     containerImagens: {
         justifyContent: 'center'
@@ -79,11 +75,13 @@ const styles = StyleSheet.create({
         paddingRight: 34,
         paddingLeft: 34,
         paddingBottom: 10,
-        width: '100%'
+        width: '100%',
+        color: '#765DFC'
     },
     texto: {
         fontSize: 20,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: '#765DFC'
     },
     imagens: {
         marginBottom: 5,
@@ -93,7 +91,7 @@ const styles = StyleSheet.create({
     imagem: {
         width: '98%',
         height: 230,
-        borderRadius: 10
+        borderRadius: 16
     },
     cardTitulo: {
         textAlign: 'center',
@@ -109,7 +107,8 @@ const styles = StyleSheet.create({
     comentario: {
         fontSize: 20,
         textAlign: 'center',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: '#765DFC'
     },
     card: {
         backgroundColor: 'white',

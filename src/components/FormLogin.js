@@ -23,7 +23,7 @@ export default function Login() {
 
             <View style={styles.form}>
                 <TextInput style={styles.input} placeholder="Usuario" value={del1} onChangeText={setDel1} />
-                <TextInput style={styles.input} placeholder="Senha" value={del2} onChangeText={setDel2} />
+                <TextInput style={styles.input} placeholder="Senha" secureTextEntry={true} value={del2} onChangeText={setDel2} />
             </View>
 
             <View style={styles.buttom}>
@@ -44,10 +44,10 @@ export default function Login() {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+       //alignItems: 'center'
     },
     titulo: {
-        textAlign: 'center'
+        alignItems: 'center'
     },
     textTitulo: {
         fontSize: 40,
@@ -55,12 +55,13 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     form: {
-        alignItems: 'center'
-    },
-
+        alignItems: 'center',
+        //flexDirection: 'row',
+    },    
     input: {
         width: '95%',
-        marginTop: 20,
+        textAlign: 'center',
+        margin: 10,
         marginBottom: 1,
         padding: 10,
         fontSize: 26,

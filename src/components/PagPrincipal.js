@@ -36,7 +36,9 @@ export default function PagPrincipal() {
                         <Text style={styles.textoCard}>A prótese protocolo é a solução mais viável para quem cansou das dentaduras ou para aqueles que nem querem pensar na prótese convencional.</Text>
                     </View>
                 </View>
-
+                   <View style={styles.titulo}>
+                    <Text style={styles.textoTitulo}>Tratamentos</Text>
+                   </View>
                 <View style={styles.card}>
                     <Image style={styles.imageCard}
                         source={require('../../assets/sorriso2.png')} />
@@ -85,6 +87,7 @@ const styles = StyleSheet.create({
     textoMain: {
         fontSize: 17,
         fontWeight: 'bold',
+        color: '#765DFC'
     },
     card: {
         border: 1,
@@ -108,6 +111,7 @@ const styles = StyleSheet.create({
     textoCard: {
         fontSize: 17,
         fontWeight: 'bold',
-        width: '98%'
+        width: '98%',
+        color: '#689FF7'
     },
 })
